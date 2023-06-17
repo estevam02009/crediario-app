@@ -5,26 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Venda extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'nome',
-        'endereco',
-        'telefone',
-        'cidade',
-        'uf'
+        'cliente_id', 'produto_id'
     ];
 
     public static function rules()
     {
         return [
-            'nome' => 'required|string',
-            'endereco' => 'required|string',
-            'telefone' => 'required|string',
-            'cidade' => 'required|string',
-            'uf' => 'required|string',
+            'cliente_id' => 'required|exists:clientes.id',
+            'produto_id' => 'required|exists:produtos.id',
         ];
     }
 
@@ -32,7 +25,7 @@ class Cliente extends Model
     {
         return [
             'required' => 'O campo :attribute é obrigatório.',
-            'string' => 'O campo :attribute deve ser uma string',
+            'exists' => 'O campo :attributr selecionado é inválido.'
         ];
     }
 }
