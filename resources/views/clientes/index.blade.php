@@ -18,6 +18,22 @@
                     <th style="width: 200px">Açōes</th>
                 </tr>
             </thead>
+
+            <tbody>
+                @foreach ($clientes as $cliente)
+                    <tr>
+                        <td>{{ $cliente->id }}</td>
+                        <td>{{ $cliente->nome }}</td>
+                        <td>{{ $cliente->endereco }}</td>
+                        <td>{{ $cliente->telefone }}</td>
+                        <td>{{ $cliente->cidade }}</td>
+                        <td>{{ $cliente->uf }}</td>
+                        <td>
+                            <a href="{{ route('clientes.show', $cliente) }}" class="btn btn-outline-info btn-sm">Ver</a>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
         </table>
     </div>
 

@@ -26,9 +26,9 @@
                 <label for="cidade" class="form-label">Cidade</label>
                 <select name="cidade" id="cidade" class="form-select">
                     <option selected>Selecione a Cidade</option>
-                    <option value="1">Caraúbas</option>
-                    <option value="2">Assu</option>
-                    <option value="3">Mossoró</option>
+                    <option value="Caraúbas">Caraúbas</option>
+                    <option value="Assu">Assu</option>
+                    <option value="Mossoró">Mossoró</option>
                 </select>
             </div>
 
@@ -36,9 +36,9 @@
                 <label for="uf" class="form-label">Estado</label>
                 <select name="uf" id="uf" class="form-select">
                     <option selected>Selecione o Estado </option>
-                    <option value="1">RN</option>
-                    <option value="2">PB</option>
-                    <option value="3">CE</option>
+                    <option value="RN">RN</option>
+                    <option value="PB">PB</option>
+                    <option value="CE">CE</option>
                 </select>
             </div>
 
